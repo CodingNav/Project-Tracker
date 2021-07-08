@@ -15,7 +15,6 @@
 }
 
 /* INSTRUCTIONS CSS */
-
 .list-group {
     width: 350px;
     margin-top: 25px;
@@ -50,4 +49,16 @@
 
 #add-project:hover {
     background-color: #d1d1d1;
+}
+
+/* TABLE CSS */
+.table .thead-dark th {
+    color: #fff;
+    background-color: #e45325;
+    border-color: #c7c7c7;
+}
+
+tbody tr td {
+    background-color: var(--main-color);
+    color: var(--font-color);
 }
