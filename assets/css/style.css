@@ -1,12 +1,16 @@
-
+:root {
+    --main-color: #303047;
+    --font-color: #fff;
+    --border-color: #444444;
+}
 .container {
     margin: 0;
 }
 
 /* TOP BAR CSS */
 .top-bar {
-    background-color: #303047;
-    color: white;
+    background-color: var(--main-color);
+    color: var(--font-color);
     padding: 50px;
 }
 
@@ -15,32 +19,32 @@
 .list-group {
     width: 350px;
     margin-top: 25px;
-    border: 1px solid #444444;
+    border: 1px solid var(--border-color);
     border-radius: 6px;
     font-size: 13px;
     text-align: left;
 }
 
 .list-group-item-dark {
-    background-color: #303047;
-    color: white;
+    background-color: var(--main-color);
+    color: var(--font-color);
     font-size: 20px;
     font-weight: bold;
 }
 
 .list-group-item-secondary {
     background-color: #e8e9eb;
-    border-bottom: 2px solid #444444;
+    border-bottom: 2px solid var(--border-color);
 }
 
 .list-group-item:last-child {
-    background-color: #303047;
+    background-color: var(--main-color);
 }
 
 #add-project {
     width: 100%;
     padding: 5px;
-    border: 1px solid #444444;
+    border: 1px solid var(--border-color);
     border-radius: 5px;
 }
 
