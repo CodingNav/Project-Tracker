@@ -3,9 +3,6 @@
     --font-color: #fff;
     --border-color: #444444;
 }
-.container {
-    margin: 0;
-}
 
 /* TOP BAR CSS */
 .top-bar {
@@ -14,10 +11,12 @@
     padding: 50px;
 }
 
+.first-row {
+    margin-top: 25px;
+}
+
 /* INSTRUCTIONS CSS */
 .list-group {
-    width: 350px;
-    margin-top: 25px;
     border: 1px solid var(--border-color);
     border-radius: 6px;
     font-size: 13px;

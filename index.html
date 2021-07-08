@@ -24,12 +24,13 @@
     </div>
 
     <!-- INSTRUCTIONS BOX -->
-    <div class="container add-project-box">
-        <div class="row">
-            <div class="col-3 text-center">
+    <div class="container-fluid">
+        <div class="row first-row">
+            <div class="col-4 text-center add-project-box">
                 <ul class="list-group">
                     <li class="list-group-item list-group-item-dark">Instructions</li>
-                    <li class="list-group-item list-group-item-secondary">Click the button below to open a form and provide information for the
+                    <li class="list-group-item list-group-item-secondary">Click the button below to open a form and
+                        provide information for the
                         following:</li>
                     <li class="list-group-item">Project Name</li>
                     <li class="list-group-item">Project Type</li>
@@ -40,24 +41,27 @@
                     </li>
                 </ul>
             </div>
+
+
+            <!-- PROJECTS TABLE -->
+            <div class="col-8">
+                <table class="table table-bordered">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Project Name</th>
+                            <th scope="col">Project Type</th>
+                            <th scope="col">Hourly Rate($)</th>
+                            <th scope="col">Due Date</th>
+                            <th scope="col">Dates Until Due Date</th>
+                            <th scope="col">Potential Total Earnings($)</th>
+                            <th scope="col"> </th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
         </div>
     </div>
-
-    <!-- PROJECTS TABLE -->
-    <table class="table table-bordered">
-        <thead class="thead-dark">
-          <tr>
-            <th scope="col">Project Name</th>
-            <th scope="col">Project Type</th>
-            <th scope="col">Hourly Rate($)</th>
-            <th scope="col">Due Date</th>
-            <th scope="col">Dats Until Due Date</th>
-            <th scope="col">Potential Total Earnings($)</th>
-            <th scope="col"> </th>
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
