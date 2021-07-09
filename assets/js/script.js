@@ -1,6 +1,6 @@
 
 setInterval(function () {
-    var currentTime = moment().format("MMM Do, YYYY [at] hh:m:ss a");
+    var currentTime = moment().format("MMM Do, YYYY [at] hh:mm:ss a");
     $("#current-time").text(currentTime);
 }, 1000);
 
