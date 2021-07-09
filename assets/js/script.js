@@ -6,4 +6,8 @@ setInterval(function () {
 
 $('#myModal').on('shown.bs.modal', function () {
     $('#add-project').trigger('focus')
-  })
+})
+
+$(function () {
+    $("#datepicker").datepicker({ minDate: 0,});
+});
