@@ -4,6 +4,7 @@ var hourlyRate = document.querySelector(".hourly-rate");
 var date = document.querySelector("#date-picker");
 var submitButton = document.querySelector("#submit-button");
 var projectTable = document.querySelector("#project-table tbody");
+var projectForm = document.querySelector("#project-form")
 var projectList = [];
 
 // Date on Top Bar
@@ -54,19 +55,19 @@ function loadProjects() {
 
         projectName.textContent = project.name;
         projectType.textContent = project.type;
-        hourlyRate.textContent = project.rate;
+        hourlyRate.textContent = project.rate.toFixed(2);
         dueDate.textContent = project.date;
         daysUntil.textContent = project.daysRemaining + " days";
-        totalEarnings.textContent = project.totalEarnings;
+        totalEarnings.textContent = project.totalEarnings.toFixed(2);
     }
 }
 
 // Stores and adds project to table when submit is clicked
-submitButton.addEventListener('click', function() {
+projectForm.addEventListener('submit', function() {
     var projectData = {
         name: projectName.value,
         type: projectType.value,
-        rate: hourlyRate.value,
+        rate: parseFloat(hourlyRate.value),
         date: date.value,
         daysRemaining: moment(date.value).diff(moment(), "days"),
     }
@@ -77,6 +78,8 @@ submitButton.addEventListener('click', function() {
     }
     projectList.push(projectData);
     localStorage.setItem("projects", JSON.stringify(projectList));
+
+    $('#project-modal').modal('hide');
 
     loadProjects();
 });

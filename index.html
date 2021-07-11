@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
 </head>
 
 <body>
@@ -39,7 +39,8 @@
                     <li class="list-group-item">Due Date</li>
                     <li class="list-group-item">Hourly Rate</li>
                     <li class="list-group-item">
-                        <button type="button" class="btn btn-light w-100" data-toggle="modal" data-target="#project-modal">Add
+                        <button type="button" class="btn btn-light w-100" data-toggle="modal"
+                            data-target="#project-modal">Add
                             Project</button>
                     </li>
                 </ul>
@@ -77,54 +78,56 @@
                         <span id="x-button" aria-hidden="true">&times;</span>
                     </button>
                 </div>
+                <form id="project-form">
+                    <!-- MODAL BODY -->
+                    <div class="modal-body">
 
-                <!-- MODAL BODY -->
-                <div class="modal-body">
-                    <form>
                         <!-- Project Name -->
                         <div class="form-group">
-                            <label for="project-name">Project Name</label>
-                            <input type="text" class="form-control" id="project-name"
+                            <label for="project-name">Project Name *</label>
+                            <input required type="text" class="form-control" id="project-name"
                                 placeholder="Enter the project's name">
                         </div>
                         <!-- Project Type -->
                         <div class="form-group">
-                            <label for="project-type">Project Type</label>
-                            <select id="project-type" class="form-control">
-                              <option selected>Pick one...</option>
-                              <option>Web Application (Front End)</option>
-                              <option>Web Application (Back End)</option>
-                              <option>Web Application (Full Stack)</option>
-                              <option>Mobile Application</option>
-                              <option>Print Campaign</option>
-                              <option>Digital Marketing Campaign</option>
+                            <label for="project-type">Project Type *</label>
+                            <select required id="project-type" class="form-control">
+                                <option selected>Pick one...</option>
+                                <option>Web Application (Front End)</option>
+                                <option>Web Application (Back End)</option>
+                                <option>Web Application (Full Stack)</option>
+                                <option>Mobile Application</option>
+                                <option>Print Campaign</option>
+                                <option>Digital Marketing Campaign</option>
                             </select>
                         </div>
                         <!-- Hourly Rate -->
                         <div class="form-group">
-                            <label for="hourly-rate">Hourly Rate ($)</label>
+                            <label for="hourly-rate">Hourly Rate ($) *</label>
                             <label class="sr-only" for="inlineFormInputGroup"> </label>
                             <div class="input-group mb-2">
                                 <div class="input-group-prepend">
                                     <div class="input-group-text">$</div>
                                 </div>
-                                <input type="text" class="form-control hourly-rate" id="inlineFormInputGroup"
+                                <input required type="number" step=".01" class="form-control hourly-rate" id="inlineFormInputGroup"
                                     placeholder=" ">
                             </div>
                         </div>
                         <!-- Due Date -->
                         <div class="form-group">
-                            <label for="due-date">Due Date</label>
-                            <input type="text" class="form-control"  id="date-picker" autocomplete="off" placeholder="When is the project due?">
+                            <label for="due-date">Due Date *</label>
+                            <input required type="text" class="form-control" id="date-picker" autocomplete="off"
+                                placeholder="When is the project due?">
                         </div>
-                    </form>
-                </div>
 
-                <!-- MODAL FOOTER -->
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-light" id="submit-button">Submit Project Info</button>
-                </div>
+                    </div>
+
+                    <!-- MODAL FOOTER -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-light" id="submit-button">Submit Project Info</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
